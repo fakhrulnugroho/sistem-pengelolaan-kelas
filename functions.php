@@ -1,7 +1,7 @@
 <?php 
 
 function base_url($path = null){
-	$base_url = "http://localhost/sistem_pengelolaan_kelas/";
+	$base_url = "http://localhost/sistem-pengelolaan-kelas/";
 	if($path == null){
 		return $base_url;
 	} else {
