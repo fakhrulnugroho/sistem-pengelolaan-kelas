@@ -1,13 +1,10 @@
 <?php 
 
-function base_url($path = null){
-	$base_url = "http://localhost/sistem-pengelolaan-kelas/";
-	if($path == null){
-		return $base_url;
-	} else {
-		$base_url = $base_url . $path;
-		return $base_url;
-	}
+require_once dirname(__FILE__) . "/config.php";
+
+function base_url($path = ""){
+	$base_url = $BASE_URL . "/" . ltrim($path, "/");
+	return $base_url;
 }
 
 function set_flash_message($tipe, $pesan){
@@ -19,8 +16,7 @@ function set_flash_message($tipe, $pesan){
 
 function check_flash_message($tipe){
 	if(isset($_SESSION['flash_message'])){
-		if($_SESSION['flash_message']['tipe'] == $tipe) return TRUE;
-		else return false;
+		return $_SESSION['flash_message']['tipe'] == $tipe;
 	} else return false;
 }
 

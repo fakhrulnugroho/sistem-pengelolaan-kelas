@@ -1,0 +1,7 @@
+{
+  "BASE_URL": "http://pengelolaan-kelas.test/",
+  "DB_HOST": "172.22.0.2",
+  "DB_USER": "kelas",
+  "DB_PASS": "kelas",
+  "DB_NAME": "kelas"
+}
